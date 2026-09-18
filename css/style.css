@@ -593,28 +593,3 @@ footer a:hover {
 /* --- Small Mobile Screen Adjustments --- */
 
 
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .page-introduction h1 {
-        font-size: 1.6rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    .product-card {
-        padding: 1rem;
-    }
-
-    .product-image {
-        height: 200px;
-    }
-}
