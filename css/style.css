@@ -4,6 +4,7 @@
    ========================================================================== */
 
 /* --- CSS Variables & Design Tokens --- */
+/* Defines the main colours, fonts, spacing and other reusable design values */
 :root {
     --primary-color: #2D5A43;         /* Botanical Forest Green */
     --primary-dark: #1E3E2E;          /* Deep Sage */
@@ -27,14 +28,17 @@
 }
 
 /* --- Universal Resets & Base Styles --- */
+/* Removes default browser spacing and makes element sizing easier to control */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* Enables smooth scrolling when moving between sections of the page */
 
 html {
     scroll-behavior: smooth;
+    /* Sets the overall font, background colour and layout of the website */
     font-size: 16px;
 }
 
@@ -51,6 +55,7 @@ body {
 
 main {
     flex: 1;
+    /* Keeps the header visible at the top while the user scrolls */
 }
 
 /* --- Header & Navigation --- */
@@ -61,6 +66,7 @@ header {
     background-color: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
+    /* Arranges the navigation items horizontally and keeps them evenly spaced */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
     padding: 1rem 5%;
 }
@@ -68,6 +74,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
+    /* Styles the website logo and gives it the main brand colour */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -86,14 +93,15 @@ nav {
 .logo:hover {
     color: var(--primary-dark);
 }
-
+/* Displays the navigation links in a horizontal layout */
 nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
     align-items: center;
 }
-
+/* Styles the individual navigation links */
+/* Creates the underline effect that appears when a navigation link is hovered over */
 nav ul li a {
     color: var(--text-dark);
     text-decoration: none;
@@ -123,7 +131,7 @@ nav ul li a:hover {
 nav ul li a:hover::after {
     width: 100%;
 }
-
+/* Styles the shopping cart link as a rounded button */
 .cart {
     background-color: var(--primary-light);
     color: var(--primary-color);
@@ -144,6 +152,7 @@ nav ul li a:hover::after {
 }
 
 /* --- Buttons --- */
+/* Main button styling used for calls to action throughout the website */
 .button {
     display: inline-flex;
     align-items: center;
@@ -514,7 +523,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* --- Responsive Media Queries --- */
+/* Adjusts the website layout for smaller screens such as tablets and mobile devices */
 @media (max-width: 768px) {
     header {
         padding: 0.8rem 4%;
@@ -557,5 +566,55 @@ footer a:hover {
 
     form {
         padding: 1.8rem 1.2rem;
+    }
+}
+/* --- Tablet and Medium Screen Adjustments --- */
+
+@media (max-width: 1024px) {
+    .product-container {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .benefits,
+    .values-container,
+    .porosity-container {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    .hero {
+        padding: 5rem 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem; 
+    }
+}
+/* --- Small Mobile Screen Adjustments --- */
+
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .page-introduction h1 {
+        font-size: 1.6rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-card {
+        padding: 1rem;
+    }
+
+    .product-image {
+        height: 200px;
     }
 }
