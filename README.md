@@ -73,26 +73,7 @@ I was asked to add regular commits
 I was asked to add sematic elements
 I was asked add more information to my readme file
 
-## References & Documentation
 
-- [MDN Web Docs](https://developer.mozilla.org/) – HTML, CSS, and JavaScript documentation.
-
-- [W3Schools](https://www.w3schools.com/) – HTML & CSS references
-Mozilla Developer Network (MDN) (2026) CSS. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS (Accessed: 16 September 2026).
-
-Mozilla Developer Network (MDN) (2026) Using CSS custom properties (variables). Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties (Accessed: 16 September 2026).
-
-Mozilla Developer Network (MDN) (2026) CSS flexible box layout. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout (Accessed: 16 September 2026).
-
-Mozilla Developer Network (MDN) (2026) CSS media queries. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries (Accessed: 16 September 2026).
-
-Mozilla Developer Network (MDN) (2026) Responsive web design. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design (Accessed: 16 September 2026).
-
-World Wide Web Consortium (W3C) (2025) CSS Grid Layout Module Level 1. Available at: https://www.w3.org/TR/css-grid-1/ (Accessed: 16 September 2026).
-
-World Wide Web Consortium (W3C) (2025) CSS Flexible Box Layout Module Level 1. Available at: https://www.w3.org/TR/css-flexbox-1/ (Accessed: 16 September 2026).
-
-World Wide Web Consortium (W3C) (2026) Media Queries. Available at: https://www.w3.org/TR/mediaqueries/ (Accessed: 16 September 2026).
 
 
 
@@ -270,3 +251,23 @@ Focus styles have also been added to form fields so that users can see which fie
 
  ## how the website looks on a mobile phone :
  ![alt text](<Screenshot 2026-09-16 114339.png>)
+ ## References & Documentation
+
+- [MDN Web Docs](https://developer.mozilla.org/) – HTML, CSS, and JavaScript documentation.
+
+- [W3Schools](https://www.w3schools.com/) – HTML & CSS references
+Mozilla Developer Network (MDN) (2026) CSS. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS (Accessed: 16 September 2026).
+
+Mozilla Developer Network (MDN) (2026) Using CSS custom properties (variables). Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties (Accessed: 16 September 2026).
+
+Mozilla Developer Network (MDN) (2026) CSS flexible box layout. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout (Accessed: 16 September 2026).
+
+Mozilla Developer Network (MDN) (2026) CSS media queries. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries (Accessed: 16 September 2026).
+
+Mozilla Developer Network (MDN) (2026) Responsive web design. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design (Accessed: 16 September 2026).
+
+World Wide Web Consortium (W3C) (2025) CSS Grid Layout Module Level 1. Available at: https://www.w3.org/TR/css-grid-1/ (Accessed: 16 September 2026).
+
+World Wide Web Consortium (W3C) (2025) CSS Flexible Box Layout Module Level 1. Available at: https://www.w3.org/TR/css-flexbox-1/ (Accessed: 16 September 2026).
+
+World Wide Web Consortium (W3C) (2026) Media Queries. Available at: https://www.w3.org/TR/mediaqueries/ (Accessed: 16 September 2026).
