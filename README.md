@@ -241,6 +241,9 @@ For smaller mobile screens:
 
 These changes help make the website easier to use on smaller screens.
 
+## CSS Variables
+
+
 ## Accessibility
 
 I also considered basic accessibility when creating the website.
