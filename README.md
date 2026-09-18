@@ -69,6 +69,8 @@ The HTML structure and comprehensive CSS styling are complete. The next phase of
 added photos
 added more comments
 added hero section
+I was asked to add regular commits
+I was asked add more information to my readme file
 
 ## References & Documentation
 
@@ -92,7 +94,9 @@ World Wide Web Consortium (W3C) (2025) CSS Flexible Box Layout Module Level 1. A
 
 World Wide Web Consortium (W3C) (2026) Media Queries. Available at: https://www.w3.org/TR/mediaqueries/ (Accessed: 16 September 2026).
 
-## CSS
+
+
+## CSS Part 2
 CSS3 is used to control the visual appearance, layout, spacing, typography, colours, responsive behaviour and interactive states of the website.
 
 The master stylesheet contains reusable styling for all pages so that the website maintains a consistent visual identity.
