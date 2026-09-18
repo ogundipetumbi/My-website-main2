@@ -65,6 +65,11 @@ My-website/
 
 The HTML structure and comprehensive CSS styling are complete. The next phase of development involves implementing JavaScript functionality for interactive form handling and shopping cart interactions.
 
+## Feedback
+added photos
+added more comments
+added hero section
+
 ## References & Documentation
 
 - [MDN Web Docs](https://developer.mozilla.org/) – HTML, CSS, and JavaScript documentation.
