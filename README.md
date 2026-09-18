@@ -262,7 +262,8 @@ Images also use descriptive alt text where appropriate.
 The forms use labels to identify the different fields.
 
 Focus styles have also been added to form fields so that users can see which field they are currently using.
-## how the website looks on a laptop
+## how the website looks on a laptop :
  ![alt text](<Screenshot 2026-09-16 200837-1.png>)
 
- 
+ ## how the website looks on tablet :
+ ![alt text](tabletwebsitelooks.png)
