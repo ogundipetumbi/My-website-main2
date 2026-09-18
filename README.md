@@ -267,3 +267,6 @@ Focus styles have also been added to form fields so that users can see which fie
 
  ## how the website looks on tablet :
  ![alt text](tabletwebsitelooks.png)
+
+ ## how the website looks on a mobile phone :
+ ![alt text](<Screenshot 2026-09-16 114339.png>)
