@@ -71,15 +71,7 @@ header {
     padding: 1rem 5%;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    /* Styles the website logo and gives it the main brand colour */
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 1.5rem;
-}
+
 
 .logo {
     font-size: 1.6rem;
