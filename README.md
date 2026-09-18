@@ -242,7 +242,7 @@ For smaller mobile screens:
 These changes help make the website easier to use on smaller screens.
 
 ## CSS Variables
-
+I used CSS custom properties to store commonly used colours, fonts, spacing values, shadows and other design values.
 
 ## Accessibility
 
