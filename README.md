@@ -70,14 +70,14 @@ added photos
 added more comments
 added hero section
 I was asked to add regular commits
+I was asked to add sematic elements
 I was asked add more information to my readme file
 
 ## References & Documentation
 
 - [MDN Web Docs](https://developer.mozilla.org/) – HTML, CSS, and JavaScript documentation.
 
-- [W3Schools](https://www.w3schools.com/) – HTML & CSS references.
-
+- [W3Schools](https://www.w3schools.com/) – HTML & CSS references
 Mozilla Developer Network (MDN) (2026) CSS. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS (Accessed: 16 September 2026).
 
 Mozilla Developer Network (MDN) (2026) Using CSS custom properties (variables). Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties (Accessed: 16 September 2026).
@@ -262,3 +262,7 @@ Images also use descriptive alt text where appropriate.
 The forms use labels to identify the different fields.
 
 Focus styles have also been added to form fields so that users can see which field they are currently using.
+## how the website looks on a laptop
+ ![alt text](<Screenshot 2026-09-16 200837-1.png>)
+
+ 
