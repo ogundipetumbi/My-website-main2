@@ -134,23 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = `mailto:info@lengthhaircare.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
 
-    // Leaflet map: the pin marks the centre of South Africa as a service-area marker,
-    // not a physical shop address. Tile or CDN failure leaves a useful fallback visible.
-    const mapElement = document.querySelector('#service-map');
-    const mapFallback = document.querySelector('#map-fallback');
-    if (mapElement) {
-        if (window.L) {
-            const map = L.map(mapElement, { scrollWheelZoom: false }).setView([-29.0, 24.0], 4.5);
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            L.marker([-29.0, 24.0]).addTo(map).bindPopup('<strong>LengthHairCare</strong><br>Online enquiries across South Africa').openPopup();
-            map.on('tileerror', () => { if (mapFallback) mapFallback.hidden = false; });
-        } else if (mapFallback) {
-            mapFallback.hidden = false;
-        }
-    }
 });
 
 function escapeHTML(value) {
