@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://ogundipetumbi.github.io/My-website-main2/sitemap.xml

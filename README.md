@@ -1,273 +1,81 @@
-# LengthHairCare Website
+﻿# LengthHairCare Website
 
-A multi-page responsive natural hair care website project developed as part of my Software Development studies.
+LengthHairCare is a small, multi-page website for a South African natural hair-care brand. It introduces the brand, shares a beginner-friendly guide to hair porosity, and lets visitors browse products and make enquiries. This project was built for the WEDE5020 Web Development POE.
 
-## About the Project
+## Pages
 
-LengthHairCare is a natural hair care website created to provide information about natural hair care, educate users on hair porosity, and promote natural hair care products. The website allows users to learn about the brand, explore products, read the hair care guide, and make enquiries.
+- `index.html` - brand introduction and featured products.
+- `pages/products.html` - products rendered from a JavaScript list, with search, category filtering and an image lightbox.
+- `pages/enquiry.html` - expandable porosity guide and a validated product recommendation form.
+- `pages/about.html` - the brand story, mission and values.
+- `pages/contact.html` - general contact form and an interactive South Africa service-area map.
 
-## Website Pages
+## Features added for Part 3
 
-- **Home page (`index.html`)** – Introduces LengthHairCare, featured products, brand benefits, and navigation.
-- **Products page (`pages/products.html`)** – Displays the natural hair product collection with pricing and enquiry links.
-- **About page (`pages/about.html`)** – Details LengthHairCare's story, mission, and core values.
-- **Hair Guide (`pages/enquiry.html`)** – Educates users on hair porosity (low, medium, high) and includes an enquiry submission form.
-- **Contact page (`pages/contact.html`)** – Provides company contact details and a direct messaging form.
+- Product cards are created from a JavaScript array. Search is case-insensitive, category filters can be combined with search, and an empty message appears when there are no matches.
+- Product images open in a responsive lightbox. It can be closed with the close button, by clicking the dark background or by pressing Escape. Focus returns to the image button after closing.
+- The hair porosity guide uses keyboard-operable expandable cards.
+- The enquiry form checks required fields, email format and message length before showing a personalised response. It identifies the selected product and explains that unlisted prices and availability are confirmed on enquiry.
+- Product links pass their selection to the enquiry page.
+- The contact form checks its fields and prepares an email addressed to `info@lengthhaircare.co.za` in the visitor's email application. The visitor must press Send; the static site cannot confirm that an email was delivered. A real server-side form service would be needed for confirmed sending.
+- The Leaflet map shows the approximate centre of South Africa as a service-area marker. It does not represent a physical store address. OpenStreetMap map tiles may require an internet connection.
+- Each page has its own title and search description. Important images have descriptive filenames and alt text. `robots.txt` and `sitemap.xml` are included.
+- The shared stylesheet retains the botanical colours and responsive layout, and adds reduced-motion support, clear keyboard focus, form feedback and mobile map styling.
 
-## Project Structure
+## Technology
+
+HTML5, CSS3 and plain JavaScript. The contact map uses Leaflet 1.9.4 with OpenStreetMap tiles and attribution. No framework, build step or API key is required.
+
+## Run locally
+
+Open `index.html` in a browser, or serve the project folder with a simple local web server. A local server is recommended for consistent browser behaviour. The search, gallery and forms run in the browser. The map needs an internet connection to load Leaflet and map tiles.
+
+## Part 2 feedback and changelog
+
+The notes carried over in the earlier README mention adding photos and comments, using semantic elements, adding detail to the README and making regular commits. The existing project already had a hero section and product photos; this update keeps them, adds meaningful image descriptions and comments around new behaviour, improves documentation, and records the Part 3 work below. There was no separate lecturer feedback sheet in the supplied files, so these are the notes visible in the existing README rather than a claim that every lecturer comment has been reviewed.
+
+### 2026-10-29 - Part 3
+
+- `pages/products.html`, `javascript/script.js`: added a data-driven product catalogue, combined search and category filter, live result count and no-results guidance. Product cards link to a preselected enquiry.
+- `assets/`, `pages/products.html`, `javascript/script.js`: renamed images used by the site with descriptive filenames and added an accessible enlarged-image lightbox with close-button, background-click and Escape controls.
+- `pages/enquiry.html`, `javascript/script.js`: added expandable porosity guidance and required, length-limited form controls with immediate browser validation and a product-specific response.
+- `pages/contact.html`, `javascript/script.js`: clarified the distinction between general contact and product enquiries; added a validated email-draft workflow with truthful delivery wording.
+- `pages/contact.html`, `javascript/script.js`, `css/style.css`: added a responsive Leaflet service-area map with a clearly explained approximate marker and fallback message.
+- `index.html`, `pages/about.html`, `pages/products.html`, `pages/enquiry.html`, `pages/contact.html`: added unique titles, descriptions and relevant keywords; improved navigation labels and image descriptions.
+- `robots.txt`, `sitemap.xml`: added basic crawler guidance and a sitemap for the GitHub Pages address associated with this repository. Update the sitemap if the final deployment uses another domain.
+- `README.md`: documented features, setup, dependencies, limitations and this changelog.
+
+## Deployment
+
+The repository is `ogundipetumbi/My-website-main2`. The expected GitHub Pages address is `https://ogundipetumbi.github.io/My-website-main2/`, but deployment status was not available in the supplied files and has not been confirmed. Enable GitHub Pages in the repository settings, then visit the published site and check every page, image path, map, form and search control. Update the canonical URL in `sitemap.xml` if the published address differs.
+
+## Image and service credits
+
+The product and design images are the assets supplied with this project. Their original creator/licence information was not included in the zip; confirm that you have permission to use them and add credits if required. Leaflet is provided under its open-source licence. The map tiles are from OpenStreetMap and are attributed on the map.
+
+## Folder structure
 
 ```text
-My-website/
-│
-├── assets/         # Product images and graphics
-├── css/
-│   └── style.css   # Master responsive CSS stylesheet
-├── javascript/
-│   └── script.js   # JavaScript file for website functionality
-├── pages/
-│   ├── about.html  # About Us page
-│   ├── contact.html# Contact Us page
-│   ├── enquiry.html# Hair Guide & Enquiry page
-│   └── products.html# Products catalogue page
-├── index.html      # Main landing page
-└── README.md       # Project documentation
+assets/          Product and project images
+css/style.css    Shared styling
+javascript/      Browser interactions
+pages/           Products, hair guide, about and contact pages
+index.html       Home page
+robots.txt       Crawler instructions
+sitemap.xml      Page list for search engines
+README.md        Project notes and changelog
 ```
 
-## Technologies Used
-
-- **HTML5** – Semantic markup and page structure.
-- **CSS3** – Modern flexbox/grid layout, custom design tokens, and responsive media queries.
-- **JavaScript** – Website interactivity (in development).
-- **Visual Studio Code** – Code editor.
-- **GitHub** – Version control and repository hosting.
-
-## Features & Styling
-
-- **Botanical Theme**: Custom color palette using forest green (`#2D5A43`), warm gold (`#C88A58`), and soft linen backgrounds (`#FAF8F5`).
-- **Responsive Layout**: Mobile-friendly navigation header, dynamic product grid cards, and clean forms.
-- **Accessibility**: Semantic HTML tags (`<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`) with descriptive `alt` text for images.
-
-## Current Progress
-
-- [x] Initial website structure
-- [x] Homepage structure
-- [x] About page structure
-- [x] Products page structure
-- [x] Hair Guide & Enquiry page structure
-- [x] Contact page structure
-- [x] Master CSS styling & responsive layout
-- [ ] JavaScript functionality
-- [x] Initial testing and HTML refinement
-
-## Project Status
-
-**In active development.**
-
-The HTML structure and comprehensive CSS styling are complete. The next phase of development involves implementing JavaScript functionality for interactive form handling and shopping cart interactions.
-
-## Feedback
-added photos
-added more comments
-added hero section
-I was asked to add regular commits
-I was asked to add sematic elements
-I was asked add more information to my readme file
-
-
-
-
-
-## CSS Part 2
-CSS3 is used to control the visual appearance, layout, spacing, typography, colours, responsive behaviour and interactive states of the website.
-
-The master stylesheet contains reusable styling for all pages so that the website maintains a consistent visual identity.
-
-## CSS features used include:
-**CSS custom properties.** 
-**CSS Grid.** 
-**Flexbox.** 
-**Media queries.** 
-**Transitions.** 
-**Transforms.** 
-**Gradients.** 
-**Box shadows.** 
-**Border radius.** 
-**Responsive layouts.** 
-**Hover and focus states.** 
-**Sticky positioning.** 
-**Backdrop filtering.** 
-
-## CSS Design System
-The website uses a central design system created through CSS custom properties in the :root selector.
-
-This allows colours, spacing values, shadows, typography and other design values to be reused throughout the stylesheet.
-
-## Colour Palette
-
-The main colour palette was selected to support the natural and botanical identity of the LengthHairCare brand.
-
-## Navigation
-
-The website has a navigation bar that appears at the top of the pages.
-
-The navigation contains:
-
-**The LengthHairCare logo.** 
-**Links to the different pages.** 
-**A cart link.** 
-
-The header uses position: sticky, which means it stays at the top of the screen when the user scrolls down.
-
-The navigation links also have a hover effect. When the user moves their mouse over a link, the link changes colour and an underline appears
-
-## Buttons
-
-Buttons are used throughout the website to help users move to different sections or pages.
-
-The main button uses the green brand colour and has rounded corners.
-
-A hover effect has also been added so that the button changes colour and moves slightly when the user places the mouse over it.
-
-A secondary button style is also included for buttons that need an outlined appearance.
-
-## Hero Section
-
-The Home page has a large hero section at the top of the page.
-
-The hero section contains the main introduction to LengthHairCare and uses a combination of light green, cream and gold colours.
-
-The text is centred and the heading is larger than the other headings on the page so that it stands out.
-
-## Product Cards
-
-The Products page uses cards to display the different products.
-
-Each product card contains an image, product name, description, price and button.
-
-The cards have rounded corners, borders and shadows.
-
-A hover effect has also been added to the cards. When the user moves their mouse over a card, it moves slightly upwards and the shadow becomes more noticeable.
-
-The product image also becomes slightly larger when the card is hovered over.
-
-## CSS Grid and Flexbox
-
-I used CSS Grid and Flexbox to help create the website layouts.
-
-CSS Grid is mainly used for the product cards, benefits, values and hair porosity sections.
-
-For example:
-.product-container {
- **display: grid;**
-    **grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));**
-}
-
-This allows the product cards to automatically adjust depending on the available screen size.
-
-Flexbox is used in areas such as the navigation bar to position the logo and navigation links.
-
-## Forms
-
-The Contact and Enquiry pages contain forms.
-
-The forms include different types of input fields such as:
-
-**Text fields.**
-**Email fields.**
-**Select fields.**
-**Text areas.**
-**Submit buttons.**
-
-The forms have been styled to match the rest of the website.
-
-A focus effect has also been added. When a user clicks on an input field, the border changes to green and a small shadow appears around the field.
-
-This makes it easier for the user to see which field they are currently using.
-
-## Responsive Design
-
-The website has been designed to work on different screen sizes, including desktop computers, tablets and mobile phones.
-
-Media queries were used to change the layout at different screen sizes.
-
-## 1024px
-
-At this screen size:
-
-**Grid spacing is reduced.**
-**Content gets additional spacing.**
-**The hero section becomes smaller.**
-**The hero heading is reduced.**
-
-## 768px
-
-At this screen size:
-
-**The navigation changes to a vertical layout.**
-**Navigation links can wrap onto multiple lines.**
-**Hero spacing is reduced.**
-**Heading sizes are reduced.**
-**Form spacing is reduced.**
-
-## 480px
-
-For smaller mobile screens:
-
-**The logo becomes smaller.**
-**Navigation spacing is reduced.**
-**Navigation text becomes smaller.**
-**Buttons become full width.**
-**Product cards are displayed in one column.**
-**Hero text becomes smaller.**
-
-These changes help make the website easier to use on smaller screens.
-
-## CSS Variables
-I used CSS custom properties to store commonly used colours, fonts, spacing values, shadows and other design values.
-
-## Accessibility
-
-I also considered basic accessibility when creating the website.
-
-Semantic HTML elements are used to give the pages a clear structure, including:
-
-<header>
-<nav>
-<main>
-<section>
-<article>
-<footer>
-
-Images also use descriptive alt text where appropriate.
-
-The forms use labels to identify the different fields.
-
-Focus styles have also been added to form fields so that users can see which field they are currently using.
-## how the website looks on a laptop :
- ![alt text](<Screenshot 2026-09-16 200837-1.png>)
-
- ## how the website looks on tablet :
- ![alt text](tabletwebsitelooks.png)
-
- ## how the website looks on a mobile phone :
- ![alt text](<Screenshot 2026-09-16 114339.png>)
- ## References & Documentation
-
-- [MDN Web Docs](https://developer.mozilla.org/) – HTML, CSS, and JavaScript documentation.
-
-- [W3Schools](https://www.w3schools.com/) – HTML & CSS references
-Mozilla Developer Network (MDN) (2026) CSS. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS (Accessed: 16 September 2026).
-
-Mozilla Developer Network (MDN) (2026) Using CSS custom properties (variables). Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties (Accessed: 16 September 2026).
-
-Mozilla Developer Network (MDN) (2026) CSS flexible box layout. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Flexible_box_layout (Accessed: 16 September 2026).
-
-Mozilla Developer Network (MDN) (2026) CSS media queries. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries (Accessed: 16 September 2026).
-
-Mozilla Developer Network (MDN) (2026) Responsive web design. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design (Accessed: 16 September 2026).
-
-World Wide Web Consortium (W3C) (2025) CSS Grid Layout Module Level 1. Available at: https://www.w3.org/TR/css-grid-1/ (Accessed: 16 September 2026).
-
-World Wide Web Consortium (W3C) (2025) CSS Flexible Box Layout Module Level 1. Available at: https://www.w3.org/TR/css-flexbox-1/ (Accessed: 16 September 2026).
-
-World Wide Web Consortium (W3C) (2026) Media Queries. Available at: https://www.w3.org/TR/mediaqueries/ (Accessed: 16 September 2026).
+## Known limitations
+
+- The contact form opens a visitor's mail app; it is not a guaranteed server-side email service.
+- The map is an online service-area illustration, not a business address. It depends on the Leaflet CDN and OpenStreetMap tile availability.
+- Most product prices are intentionally shown as available on enquiry because no confirmed prices were supplied.
+- GitHub Pages has not been confirmed as enabled. The site should be checked at its published URL before submission.
+- Part 2 feedback is documented from the notes that were present in the supplied README. Add any additional lecturer comments and the specific corrections they require.
+
+## References
+
+- Leaflet, *Quick Start Guide*: https://leafletjs.com/examples/quick-start/
+- OpenStreetMap, *Copyright and attribution*: https://www.openstreetmap.org/copyright
+- MDN Web Docs: https://developer.mozilla.org/
