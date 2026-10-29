@@ -618,3 +618,36 @@ footer a:hover {
         height: 200px;
     }
 }
+
+/* --- Part 3: catalogue, accessible interactions, map and form feedback --- */
+.eyebrow { color: var(--accent-gold); text-transform: uppercase; letter-spacing: .12em; font-size: .82rem; font-weight: 700; margin-bottom: .6rem; }
+.catalogue-controls { display: grid; grid-template-columns: minmax(0, 2fr) minmax(190px, 1fr); gap: 1rem; max-width: 850px; margin: 1.5rem auto; text-align: left; }
+.catalogue-controls label { display: block; font-weight: 600; color: var(--primary-color); margin-bottom: .45rem; }
+.catalogue-controls input, .catalogue-controls select { width: 100%; min-height: 48px; padding: .75rem 1rem; border: 1.5px solid var(--border-color); border-radius: var(--radius-sm); background: #fff; color: var(--text-dark); font: inherit; }
+.catalogue-controls input:focus, .catalogue-controls select:focus, button:focus-visible, a:focus-visible { outline: 3px solid var(--accent-gold); outline-offset: 3px; }
+.result-count, .small-note { text-align: center; color: var(--text-muted); margin: .8rem auto 1.2rem; }
+.small-note { max-width: 760px; font-size: .9rem; }
+.empty-state, .map-fallback { background: var(--primary-light); border-radius: var(--radius-sm); padding: 1rem; text-align: center; color: var(--primary-dark); }
+.gallery-trigger { position: relative; display: block; width: 100%; border: 0; background: transparent; cursor: zoom-in; font: inherit; color: inherit; }
+.gallery-trigger .product-image { margin-bottom: 0; }
+.gallery-hint { display: block; color: var(--primary-color); font-size: .85rem; margin-top: .5rem; }
+.lightbox[hidden] { display: none; }
+.lightbox:not([hidden]) { position: fixed; inset: 0; z-index: 2000; display: grid; place-items: center; width: 100%; height: 100%; max-width: none; max-height: none; border: 0; padding: 4rem 1.25rem 1.25rem; background: rgba(22, 35, 29, .92); }
+.lightbox-image { max-width: min(92vw, 1000px); max-height: 82vh; object-fit: contain; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg); }
+.lightbox-close { position: absolute; top: 1.2rem; right: 1.2rem; background: #fff; border: 0; border-radius: 999px; padding: .7rem 1rem; font: inherit; font-weight: 700; cursor: pointer; }
+.lightbox-close span { font-size: 1.3rem; margin-left: .35rem; }
+.lightbox-open { overflow: hidden; }
+.accordion-button { width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; color: inherit; background: transparent; border: 0; font: inherit; font-weight: 700; font-size: 1.15rem; cursor: pointer; }
+.accordion-button span { color: var(--accent-gold); font-size: 1.6rem; }
+.accordion-button[aria-expanded="true"] span { transform: rotate(45deg); }
+.porosity-card [hidden] { display: none; }
+.porosity-card a, .contact-information a { color: var(--primary-color); font-weight: 600; }
+.form-help { margin-top: 1rem; color: var(--text-muted); font-size: .9rem; }
+.form-result { margin-top: 1.25rem; padding: 1rem 1.15rem; border-left: 4px solid var(--accent-gold); border-radius: var(--radius-sm); background: var(--primary-light); color: var(--primary-dark); }
+.form-result[hidden] { display: none; }
+form button:disabled { opacity: .75; cursor: default; }
+#service-map { height: 380px; max-width: 1050px; margin: 1.5rem auto 0; border: 1px solid var(--border-color); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); z-index: 1; }
+.map-section > p { max-width: 850px; margin: 0 auto; text-align: center; color: var(--text-muted); }
+.contact-form-section > p { text-align: center; margin: 0 auto 1.2rem; max-width: 700px; color: var(--text-muted); }
+@media (max-width: 600px) { .catalogue-controls { grid-template-columns: 1fr; } #service-map { height: 300px; } .lightbox-close { top: .7rem; right: .7rem; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
